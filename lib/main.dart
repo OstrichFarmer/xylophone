@@ -47,7 +47,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 TextButton(
                   style:
-                      TextButton.styleFrom(backgroundColor: Colors.blueAccent),
+                      TextButton.styleFrom(backgroundColor: Colors.cyanAccent),
                   onPressed: () {
                     final player = AudioCache();
                     player.play('assets_note4.wav');
