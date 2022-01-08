@@ -7,82 +7,67 @@ void main() {
 
 class XylophoneApp extends StatelessWidget {
   // const XylophoneApp({Key? key}) : super(key: key);
+  void playSound(int noteNumber) {
+    final player = AudioCache();
+    player.play('assets_note$noteNumber.wav');
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.greenAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note1.wav');
-                  },
-                  child: Text('Play'),
-                ),
-                TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.redAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note2.wav');
-                  },
-                  child: Text('Play'),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.yellowAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note3.wav');
-                  },
-                  child: Text('Play'),
-                ),
-                TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.cyanAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note4.wav');
-                  },
-                  child: Text('Play'),
-                ),
-                TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.pinkAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note5.wav');
-                  },
-                  child: Text('Play'),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.orangeAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note6.wav');
-                  },
-                  child: Text('Play'),
-                ),
-                TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.amberAccent),
-                  onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note7.wav');
-                  },
-                  child: Text('Play'),
-                )
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              TextButton(
+                style:
+                    TextButton.styleFrom(backgroundColor: Colors.greenAccent),
+                onPressed: () {
+                  playSound(1);
+                },
+              ),
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.redAccent),
+                onPressed: () {
+                  playSound(2);
+                },
+              ),
+              TextButton(
+                style:
+                    TextButton.styleFrom(backgroundColor: Colors.yellowAccent),
+                onPressed: () {
+                  playSound(3);
+                },
+              ),
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.cyanAccent),
+                onPressed: () {
+                  playSound(4);
+                },
+              ),
+              TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.pinkAccent),
+                onPressed: () {
+                  playSound(5);
+                },
+              ),
+              TextButton(
+                style:
+                    TextButton.styleFrom(backgroundColor: Colors.orangeAccent),
+                onPressed: () {
+                  playSound(6);
+                },
+              ),
+              TextButton(
+                style:
+                    TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+                onPressed: () {
+                  playSound(7);
+                },
+              )
+            ],
           ),
         ),
       ),
