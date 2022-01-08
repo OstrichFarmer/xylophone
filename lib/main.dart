@@ -4,6 +4,7 @@ import 'package:audioplayers/audio_cache.dart';
 void main() {
   runApp(XylophoneApp());
 }
+
 class XylophoneApp extends StatelessWidget {
   // const XylophoneApp({Key? key}) : super(key: key);
 
@@ -13,12 +14,74 @@ class XylophoneApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Center(
-            child: TextButton(
-              onPressed: () {
-                final player = AudioCache();
-                player.play('assets_note1.wav');
-              },
-              child: Text('Play'),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TextButton(
+                  style:
+                      TextButton.styleFrom(backgroundColor: Colors.greenAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note1.wav');
+                  },
+                  child: Text('Play'),
+                ),
+                TextButton(
+                  style:
+                      TextButton.styleFrom(backgroundColor: Colors.redAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note2.wav');
+                  },
+                  child: Text('Play'),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.yellowAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note3.wav');
+                  },
+                  child: Text('Play'),
+                ),
+                TextButton(
+                  style:
+                      TextButton.styleFrom(backgroundColor: Colors.blueAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note4.wav');
+                  },
+                  child: Text('Play'),
+                ),
+                TextButton(
+                  style:
+                      TextButton.styleFrom(backgroundColor: Colors.pinkAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note5.wav');
+                  },
+                  child: Text('Play'),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.purpleAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note6.wav');
+                  },
+                  child: Text('Play'),
+                ),
+                TextButton(
+                  style:
+                      TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets_note7.wav');
+                  },
+                  child: Text('Play'),
+                )
+              ],
             ),
           ),
         ),
